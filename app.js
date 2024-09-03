@@ -18,6 +18,6 @@ app.use(express.static(assetsPath));
 
 app.use("/", indexRoutes );
 
-// app.use("/message", msgRoutes)
+app.use("/message", msgRoutes)
 
-app.listen(process.env.PORT_LISTEN);
+app.listen(process.env.PORT_LISTEN || 4090);
