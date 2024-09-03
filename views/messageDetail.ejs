@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="./output.css">
     <title>Document</title>
 </head>
-<body class="">
+<body>
     <%- include('./top-bottom/header.ejs') %>
-    <%- include('./Body/msgContainer', {msgs: messages})%>
+
+    <%- include('./Body/DisplayMsg.ejs', {message: msg}) %>
 </body>
 </html>

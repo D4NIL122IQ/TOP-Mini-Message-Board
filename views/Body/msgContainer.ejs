@@ -1,3 +1,10 @@
-<div class="container">
-    
+<div class="container"">
+    <% for( let i = 0; i < msgs.length; i++ ) { %>
+        <div class="border-4">
+            <h3>user : <%= msgs[i].user %></h3>
+            <p>message: <%= msgs[i].text %></p>
+            <a href="/message/<%= i %>">view detail</a>
+        </div>
+    <% } %>
+
 </div>
