@@ -1,15 +1,13 @@
 const {Router} = require("express")
 
 const msgRouter = Router();
-const messages = require("../allMessages.js")
+const {getSpecMsg} = require('../controllers/msgControllers')
+
 
 msgRouter.get("/new" , (req, res)=>{
     res.render("formNewMsg")
 } )
 
-msgRouter.get("/:id" , (req , res)=>{
-    const msg = messages[req.params.id]
-    res.render("messageDetail" , {msg: msg})
-})
+msgRouter.get("/:id" , getSpecMsg)
 
 module.exports = msgRouter

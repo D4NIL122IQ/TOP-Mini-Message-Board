@@ -1,14 +1,8 @@
 const {Router} = require("express")
-
 const indexRouter = Router();
-const messages = require("../allMessages.js")
+const {createNewMsg , getAllMsg} = require('../controllers/msgControllers.js')
 
-indexRouter.get("/" , (req, res)=>{
-    res.render("index" , {messages: messages})
-} )
-
-indexRouter.post("/",(req,res)=>{
-    res.render("index" , {messages: messages})
-} )
+indexRouter.get("/" , getAllMsg )
+indexRouter.post("/", createNewMsg)
 
 module.exports = indexRouter
