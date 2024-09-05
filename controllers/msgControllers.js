@@ -1,10 +1,11 @@
 const messages = require('../allMessages.JS')
 
 const createNewMsg = ((req,res) =>{
+    const temp = new Date()
     const newmsg = {
         text: req.body.text,
         user: req.body.user,
-        added: new Date().getDate + '/' + new Date().getMonth + '/' +  new Date().getFullYear
+        added: temp.getDate() + '/' + temp.getMonth() + '/' +  temp.getFullYear()
     }
     messages.push(newmsg)
     res.render("index" , {messages: messages})
