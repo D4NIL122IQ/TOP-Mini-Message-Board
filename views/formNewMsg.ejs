@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="../output.css">
     <title>Document</title>
 </head>
-<body>
-    
-    <form action="/" method="post">
-        <label for="user">User : </label>
-        <input type="text" name="user" id="user">
-        <label for="text">Texte : </label>
-        <input type="text" name="text" id="text">
-        <input type="submit" value="submit">
+<body class="text-center text-xl">
+    <%- include('./top-bottom/header.ejs') %>
+    <h1 class="text-4xl font-bold mt-4 ">Create new message </h1>
+    <form action="/" method="post" class="flex flex-col mx-auto w-72 gap-4 mt-4">
+        <div>
+            <label for="user">User : </label>
+            <input type="text" name="user" id="user" class="border-2 border-black">
+        </div>
+        <div>
+            <label for="text">Texte : </label>
+            <input type="text" name="text" id="text" class="border-2 border-black">
+        </div>
+        <input type="submit" value="submit" class="border-2 border-black rounded-xl hover:bg-indigo-400 hover:text-white">
     </form>
     
 </body>
