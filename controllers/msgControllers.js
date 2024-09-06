@@ -8,7 +8,7 @@ const createNewMsg = ((req,res) =>{
         added: temp.getDate() + '/' + temp.getMonth() + '/' +  temp.getFullYear()
     }
     messages.push(newmsg)
-    res.render("index" , {messages: messages})
+    res.redirect("/");
 })
 
 const getSpecMsg = ((req,res)=>{
